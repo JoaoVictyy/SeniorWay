@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
+
+* {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(135deg, #0050c3 0%, #003d99 100%);
+    height: 650px;
+}
+
+.logo img {
+    width: 130px;
+    margin-left: 300px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.top a {
+    color: white;
+    text-decoration: none;
+}
+
+.top a:hover {
+    opacity: 0.7;
+}
+
+.top li {
+    cursor: pointer;
+}
+
+.top li:hover {
+    color: rgba(157, 151, 151, 0.519);
+}
+
+.top ul {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: flex;
+    list-style: none;
+    margin-bottom: -35px;
+    gap: 30px;
+    margin-right: 200px;
+}
+
+.texto .destaque {
+    background-color: #003d99;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.texto {
+    font-family: 'Sora', sans-serif;
+    color: white;
+    font-size: 50px;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.sobre {
+    padding: 100px 20px;
+    margin-left: -400px;
+    background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+    color: #000000;
+}
+
+.sobre .container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.sobre h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.sobre p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.sobre .destaque {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #2d71bd;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.impacto {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2d71bd;
+    margin-top: 30px;
+}
+
+.canvas {
+    background-color: #ebf5ff;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 120px;
+    gap: 15px;
+    grid-auto-flow: dense;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* cards */
+.parent>div {
+    cursor: pointer;
+    background: linear-gradient(135deg, #0050c3 0%, #003d99 100%);
+    border-radius: 20px;
+    color: white;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-family: 'Sora', sans-serif;
+    padding: 20px;
+}
+
+.parent>div:hover {
+    transform: scale(1.03);
+}
+
+.div1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.div2 {
+    grid-column: span 2;
+}
+
+.div3 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.div4 {
+    grid-column: span 2;
+}
+
+.div5 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.div6 {
+    grid-column: span 2;
+}
+
+.div7 {
+    grid-column: span 2;
+}
+
+.div9 {
+    grid-column: span 3;
+}
+
+
+.fechar {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+#modal-titulo,
+#modal-texto {
+    color: white;
+    margin: 10px 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #0050c3 0%, #003d99 100%);
+    padding: 30px;
+    border-radius: 20px;
+
+    width: 450px;
+    max-width: 90%;
+
+    color: white;
+    font-family: 'Sora', sans-serif;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+    animation: aparecer 0.3s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    opacity: 0.7;
+}
+
+.fechar:hover {
+    opacity: 1;
+}
+
+#modal-titulo {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#modal-texto {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer {
+    background: #0a1f44;
+    color: white;
+    padding: 60px 20px 20px;
+    font-family: 'Sora', sans-serif;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* logo */
+.footer-logo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    opacity: 0.8;
+}
+
+/* links */
+.footer-links h3,
+.footer-contato h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.footer-contato p {
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.social a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.creditos {
+    margin-top: 8px;
+}
+
+.creditos span {
+    color: #4da3ff;
+    font-weight: 600;
+}
+
+.beneficios {
+    padding: 200px;
+    background: #ebf5ff;
+    ;
+    text-align: center;
+}
+
+.beneficios h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.passos {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.passo {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 220px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.passo:hover {
+    transform: translateY(-5px);
+}
+
+.passo span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    background: linear-gradient(135deg, #0050c3, #003d99);
+    color: white;
+
+    border-radius: 50%;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.passo h3 {
+    font-family: 'Sora', sans-serif;
+    margin-bottom: 10px;
+}
+
+.passo p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.container2 {
+    margin-top: -100px;
+}
+
+
+h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.missão {
+    margin-top: 70px;
+}
+
+.Visão {
+    margin-top: 50px;
+}
+
+.Valores {
+    margin-top: 50px;
+}
+
+
+.history {
+    margin-top: 50px;
+}
+
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: #0050c3; 
+    border-radius: 100px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: #ffffff;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+    right: 16px;
+}
+
+.animated-button .arr-2 {
+    left: -25%;
+}
+
+.animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #0050c3;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+    right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+    left: 16px;
+}
+
+.animated-button:hover .text {
+    transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+    fill: #ffffff;
+}
+
+.animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px rgb(185, 188, 179);
+}
+
+.animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}
+
+.animated-button {
+    text-decoration: none;
+    display: inline-flex; 
+}
+
+/* CSS */
+.linhas-section {
+    padding: 100px 20px;
+}
+
+.linhas-section h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 42px;
+    color: #003d99;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+#busca-linha {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto 40px;
+    padding: 15px 20px;
+    border: 2px solid #dbe7ff;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+}
+
+#busca-linha:focus {
+    border-color: #0050c3;
+}
+
+.lista-linhas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.linha-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 80, 195, 0.08);
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.linha-card:hover {
+    transform: translateY(-5px);
+    border-color: #0050c3;
+}
+
+.linha-numero {
+    display: inline-block;
+    background: linear-gradient(135deg, #0050c3, #003d99);
+    color: white;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.linha-card h3 {
+    margin-bottom: 10px;
+    color: #003d99;
+    font-family: 'Sora', sans-serif;
+}
+
+.linha-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+#linha-itinerario {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#linha-itinerario li {
+    margin-bottom: 8px;
+}
