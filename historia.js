@@ -12,7 +12,7 @@ const conteudos = {
             CEO e Fundador da SeniorWay.<br>
             Responsável pela visão estratégica da empresa, e o desenvolvimento do site.
         `,
-        imagem: "./img/jao.png"
+        imagem: "jao.png"
     },
 
     operacoes: {
@@ -21,7 +21,7 @@ const conteudos = {
             Diretor de Operações.<br>
             Responsável pela frota e manutenção.
         `,
-        imagem: "./img/op.png"
+        imagem: "op.png"
     },
 
     tecnologia: {
