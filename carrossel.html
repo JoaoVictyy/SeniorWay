@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divulgação | SeniorWay</title>
+    <link rel="stylesheet" href="carrossel.css">
+</head>
+
+<body>
+
+    <nav class="car-nav">
+        <a href="./index.html" class="car-logo" aria-label="Voltar para o início">
+            <img src="SeniorWayLogo.png" alt="SeniorWay Logo">
+        </a>
+        <a href="./index.html" class="car-voltar">← Voltar ao site</a>
+    </nav>
+
+    <main class="stage" id="stage">
+
+        <section class="info" aria-live="polite">
+            <p class="contador"><span id="atual">01</span> / <span id="total">05</span></p>
+            <h1 id="titulo"></h1>
+            <p id="descricao"></p>
+
+            <div class="controles">
+                <button id="anterior" class="btn btn-icone" aria-label="Imagem anterior">‹</button>
+                <button id="proximo" class="btn btn-icone" aria-label="Próxima imagem">›</button>
+                <button id="auto" class="btn" aria-pressed="false">▶ Apresentar</button>
+                <button id="tela-cheia" class="btn" aria-label="Tela cheia">⛶ Tela cheia</button>
+            </div>
+
+            <p class="dica">Dica: use as setas ← → do teclado, F para tela cheia e Espaço para iniciar/pausar.</p>
+        </section>
+
+        <section class="carrossel" aria-roledescription="carrossel">
+            <div class="moldura" id="moldura">
+                <div class="trilho" id="trilho"></div>
+
+                <button class="seta seta-esq" id="seta-esq" aria-label="Imagem anterior">‹</button>
+                <button class="seta seta-dir" id="seta-dir" aria-label="Próxima imagem">›</button>
+            </div>
+
+            <div class="barra" aria-hidden="true"><span id="progresso"></span></div>
+
+            <div class="miniaturas" id="miniaturas"></div>
+        </section>
+
+    </main>
+
+    <footer class="car-footer">
+        <p>© 2026 SeniorWay. Todos os direitos reservados.</p>
+        <p>Site by <span>JoaoVictyy</span></p>
+    </footer>
+
+    <script src="carrossel.js"></script>
+</body>
+
+</html>
