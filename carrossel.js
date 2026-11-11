@@ -3,31 +3,31 @@
 // ===============================
 const slides = [
     {
-        src: "img/sua-mobilidade.png",
+        src: "sua-mobilidade.png",
         alt: "Casal de idosos caminhando em um parque, com um andador, sorrindo um para o outro",
         titulo: "Sua mobilidade não precisa diminuir com a idade",
         texto: "A SeniorWay nasce para garantir que ir e vir continue sendo um direito em todas as fases da vida."
     },
     {
-        src: "img/desafios.png",
+        src: "desafios.png",
         alt: "Idosa com dificuldade para subir o degrau alto de um ônibus comum",
         titulo: "Dificuldades no transporte comum",
         texto: "Degraus elevados, escadas difíceis e ambientes cheios e movimentados tornam o dia a dia um desafio para muitos idosos."
     },
     {
-        src: "img/solucao.png",
+        src: "solucao.png",
         alt: "Motorista da SeniorWay ajudando uma idosa com andador a embarcar em uma van adaptada",
         titulo: "A solução SeniorWay",
         texto: "Veículos adaptados e equipe treinada para oferecer um transporte gratuito, seguro e acolhedor."
     },
     {
-        src: "img/como-usar.png",
+        src: "como-usar.png",
         alt: "Casal de idosos olhando o celular, com os três passos: cadastro, solicitação e embarque",
         titulo: "Como usar em 3 passos",
         texto: "Cadastro, solicitação e embarque: simples assim, para você ter autonomia em cada jornada."
     },
     {
-        src: "img/cadastre-se.png",
+        src: "cadastre-se.png",
         alt: "Casal de idosos sentados em um banco usando o celular, com QR Code para cadastro",
         titulo: "Cadastre-se e saiba mais",
         texto: "Aponte a câmera para o QR Code e descubra como a SeniorWay pode transformar o seu dia a dia."
