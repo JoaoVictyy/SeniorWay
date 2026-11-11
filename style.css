@@ -623,3 +623,140 @@ h1 {
 #linha-itinerario li {
     margin-bottom: 8px;
 }
+
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+
+img { max-width: 100%; }
+
+.modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* ---------- Laptops pequenos / tablets grandes ---------- */
+@media (max-width: 1200px) {
+    .logo img { margin-left: 60px; }
+    .top ul { margin-right: 60px; }
+    .texto { margin-left: 60px; font-size: 42px; }
+
+    .sobre { margin-left: 0; }
+
+    .beneficios { padding: 100px 40px; }
+    .container2 { margin-top: 0; }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 900px) {
+    header { height: auto; padding-bottom: 80px; }
+
+    .top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo img {
+        margin: 30px 0 0;
+        width: 110px;
+    }
+
+    .top ul {
+        margin: 0;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .texto {
+        margin: 50px 30px 0;
+        font-size: 34px;
+    }
+
+    .sobre { padding: 60px 24px; }
+    .sobre h2 { font-size: 36px; }
+    .sobre p { font-size: 20px; }
+    .impacto { font-size: 19px; }
+
+    h1 { font-size: 34px; }
+
+    /* Canvas */
+    .canvas {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .parent > div {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .parent > .div9 { grid-column: span 2; }
+
+    /* Benefícios */
+    .beneficios { padding: 70px 24px; }
+    .beneficios h2 { font-size: 32px; }
+
+    .linhas-section { padding: 70px 0 20px; }
+    .linhas-section h2 { font-size: 32px; }
+
+    /* Rodapé */
+    .footer-container { gap: 30px; }
+}
+
+/* ---------- Celulares ---------- */
+@media (max-width: 600px) {
+    .texto {
+        margin: 40px 20px 0;
+        font-size: 28px;
+    }
+
+    .top ul { gap: 18px; font-size: 15px; }
+
+    .sobre { padding: 50px 20px; }
+    .sobre h2 { font-size: 30px; }
+    .sobre p { font-size: 17px; }
+    .impacto { font-size: 17px; }
+
+    h1 { font-size: 28px; margin-bottom: 20px; }
+
+    .missão { margin-top: 50px; }
+    .Visão, .Valores, .history { margin-top: 40px; }
+
+    .parent {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 92%;
+    }
+
+    .parent > .div9 { grid-column: auto; }
+
+    .passos { gap: 18px; }
+    .passo { width: 100%; max-width: 340px; }
+
+    .lista-linhas { grid-template-columns: 1fr; }
+    .linhas-section .container { padding: 0; }
+
+    .modal-content { padding: 24px 20px; }
+    .fechar { top: 14px; right: 18px; }
+    #modal-titulo { font-size: 20px; padding-right: 30px; }
+
+    .footer { padding: 40px 20px 20px; }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 380px) {
+    .texto { font-size: 24px; }
+    .animated-button { padding: 14px 28px; }
+}
